@@ -1,0 +1,66 @@
+﻿@model MedicalStoreWebAPI.Models.Purchase
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Purchase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicineName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicineName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicineCompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicineCompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicinePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicinePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicineQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicineQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

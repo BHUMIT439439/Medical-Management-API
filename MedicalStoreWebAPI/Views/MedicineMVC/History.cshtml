@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MedicalStoreWebAPI.Models.Purchase>
+
+@{
+    ViewBag.Title = "History";
+}
+
+<br />
+<br />
+<table class="table table-striped">
+    <thead class="table-heading">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineCompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicinePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th></th>
+        </tr>
+      </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicineName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicineCompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicinePrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicineQuantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+            </tr>
+        }
+
+</table>

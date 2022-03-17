@@ -165,6 +165,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MedicineAPIController.cs" />
     <Compile Include="Controllers\MedicineMVCController.cs" />
+    <Compile Include="Controllers\PurchasesAPIController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -187,10 +188,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Medicine.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Purchase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchase.cs">
+      <DependentUpon>Purchase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchase1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\alertifyjs\alertify.css" />
+    <Content Include="Content\alertifyjs\alertify.min.css" />
+    <Content Include="Content\alertifyjs\alertify.rtl.css" />
+    <Content Include="Content\alertifyjs\alertify.rtl.min.css" />
+    <Content Include="Content\alertifyjs\themes\bootstrap.css" />
+    <Content Include="Content\alertifyjs\themes\bootstrap.min.css" />
+    <Content Include="Content\alertifyjs\themes\bootstrap.rtl.css" />
+    <Content Include="Content\alertifyjs\themes\bootstrap.rtl.min.css" />
+    <Content Include="Content\alertifyjs\themes\default.css" />
+    <Content Include="Content\alertifyjs\themes\default.min.css" />
+    <Content Include="Content\alertifyjs\themes\default.rtl.css" />
+    <Content Include="Content\alertifyjs\themes\default.rtl.min.css" />
+    <Content Include="Content\alertifyjs\themes\semantic.css" />
+    <Content Include="Content\alertifyjs\themes\semantic.min.css" />
+    <Content Include="Content\alertifyjs\themes\semantic.rtl.css" />
+    <Content Include="Content\alertifyjs\themes\semantic.rtl.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -208,6 +243,18 @@
       <DependentUpon>Medicine.edmx</DependentUpon>
       <LastGenOutput>Medicine1.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\Purchase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Purchase.edmx</DependentUpon>
+      <LastGenOutput>Purchase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Purchase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Purchase.edmx</DependentUpon>
+      <LastGenOutput>Purchase1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\alertify.js" />
+    <Content Include="Scripts\alertify.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -236,6 +283,13 @@
     <Content Include="Models\Medicine.edmx.diagram">
       <DependentUpon>Medicine.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\Purchase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Purchase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Purchase.edmx.diagram">
+      <DependentUpon>Purchase.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -260,10 +314,19 @@
     <Content Include="Views\MedicineMVC\Create.cshtml" />
     <Content Include="Views\MedicineMVC\Edit.cshtml" />
     <Content Include="Views\MedicineMVC\Delete.cshtml" />
+    <Content Include="Views\MedicineMVC\Buy.cshtml" />
+    <Content Include="Views\PurchasesAPI\Create.cshtml" />
+    <Content Include="Views\PurchasesAPI\Delete.cshtml" />
+    <Content Include="Views\PurchasesAPI\Details.cshtml" />
+    <Content Include="Views\PurchasesAPI\Edit.cshtml" />
+    <Content Include="Views\PurchasesAPI\Index.cshtml" />
+    <Content Include="Views\MedicineMVC\History.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\MedicineAPI\" />
+    <Folder Include="Views\PurchaseAPI\" />
+    <Folder Include="Views\Purchases\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
